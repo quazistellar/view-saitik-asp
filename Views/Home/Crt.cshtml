@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Cart";
+}
+
+<div class="text-center">
+    <h3 class="display-3" style="font-family: Arial Black; font-size: 30px;">Корзина</h3>
+</div>
+
+<style>
+    .image-container {
+        border: 2px solid #7B68EE;
+        padding: 2px;
+    }
+    .cart-item {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 5px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+           
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="mb-4">Товары в корзине</h4>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="cart-item">
+                                    <div class="image-container">
+                                        <img src="@Url.Content("https://www.muztorg.ru/files/5zk/jmc/q7y/18o/ccs/00s/kks/cgw/g/5zkjmcq7y18occs00skkscgwg.jpg")"
+                                             class="img-fluid" alt="Product Image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="cart-item">
+                                <h3>IBANEZ GRG121DX-BKF</h3>
+                                <p class="card-text">Электрогитара, инструмент в корпусе черного матового цвета. Выполнен из тополя, гриф из клена и амаранта. Модель имеет 24 лада, два звукоснимателя.</p>
+                                <p style="font-family: Arial Black; font-size: 20px">Цена: 26 800 ₽</p>
+                                    <div class="input-group mb-3">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="decreaseQuantity(this)">
+                                            -
+                                        </button>
+                                        <input type="number" class="form-control" id="quantityInput" placeholder="1" aria-label="Количество"
+                                               aria-describedby="button-addon1" value="1">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="increaseQuantity(this)">
+                                            +
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-danger">Удалить</button>
+                                    <a href="#" class="btn btn-primary">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                    <div class="row mt-3">
+                        <div class="col-md-12 d-flex justify-content-end">
+                            <a href="/Home/Ord" class="btn btn-success btn-lg">Перейти к оформлению заказа</a>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    function increaseQuantity(button) {
+        let input = button.previousElementSibling;
+        let currentQuantity = parseInt(input.value);
+        input.value = currentQuantity + 1;
+    }
+
+    function decreaseQuantity(button) {
+        let input = button.nextElementSibling;
+        let currentQuantity = parseInt(input.value);
+        if (currentQuantity > 1) {
+            input.value = currentQuantity - 1;
+        }
+    }
+</script>
+

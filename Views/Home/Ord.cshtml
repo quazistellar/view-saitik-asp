@@ -1,0 +1,121 @@
+﻿@{
+    ViewData["Title"] = "Orders";
+}
+
+        <div class="text-center">
+            <h3 class="display-3" style="font-family: Arial Black; font-size: 30px;">Оформление заказа</h3>
+
+        </div>
+     
+    <div class="row">
+    <p></p>
+    <p></p>
+    <p></p>
+        <div class="col-md-6 mb-4">
+
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Корзина</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="image-container">
+                                <img src="@Url.Content("https://www.muztorg.ru/files/5zk/jmc/q7y/18o/ccs/00s/kks/cgw/g/5zkjmcq7y18occs00skkscgwg.jpg")"
+                                     class="img-fluid" alt="pikcha s gitaroi">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                        <h6 class="card-subtitle mb-2" style="font-size: 20px;">IBANEZ GRG121DX-BKF</h6>
+                        <p class="card-text">Электрогитара, инструмент в корпусе черного матового цвета. Выполнен из тополя, гриф из клена и амаранта. Модель имеет 24 лада, 5-позиционный переключатель, два звукоснимателя.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                <p>Цена: <span class="price">26800 ₽</span></p>
+                                </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-addon1" onclick="decreaseQuantity()">
+                                        -
+                                    </button>
+                                    <input type="number" class="form-control" id="quantityInput" placeholder="1" aria-label="Количество"
+                                           aria-describedby="button-addon1" value="1">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="increaseQuantity()">
+                                        +
+                                    </button>
+                                </div>
+                            </div>
+
+                            <script>
+                                function increaseQuantity() {
+                                    let quantityInput = document.getElementById('quantityInput');
+                                    let currentQuantity = parseInt(quantityInput.value);
+                                    quantityInput.value = currentQuantity + 1;
+                                }
+
+                                function decreaseQuantity() {
+                                    let quantityInput = document.getElementById('quantityInput');
+                                    let currentQuantity = parseInt(quantityInput.value);
+                                    if (currentQuantity > 1) {
+                                        quantityInput.value = currentQuantity - 1;
+                                    }
+                                }
+                            </script>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12">
+                        <p>Итого: <span class="total-price">26800 ₽</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Информация о заказе</h5>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Имя:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Введите имя">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Введите email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон:</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Введите телефон">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Адрес доставки:</label>
+                            <textarea class="form-control" id="address" rows="3" placeholder="Введите адрес"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Комментарий:</label>
+                            <textarea class="form-control" id="comment" rows="3" placeholder="Введите комментарий"></textarea>
+                        </div>
+                        <p></p>
+                        <button type="submit" class="btn btn-danger">Оформить заказ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .image-container {
+        border: 2px solid #7B68EE;
+        padding: 2px;
+    }
+
+    .price, .total-price {
+        font-weight: bold;
+    }
+</style>

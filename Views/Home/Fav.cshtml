@@ -1,0 +1,113 @@
+﻿@{
+    ViewData["Title"] = "Cart";
+}
+
+<div class="text-center">
+    <h3 class="display-3" style="font-family: Arial Black; font-size: 30px;">Избранное</h3>
+</div>
+
+<style>
+    .image-container {
+        border: 2px solid #7B68EE;
+        padding: 2px;
+    }
+
+    .cart-item {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 5px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="mb-4">Избранные товары</h4>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="cart-item">
+                                <div class="image-container">
+                                    <img src="@Url.Content("https://www.muztorg.ru/files/5zk/jmc/q7y/18o/ccs/00s/kks/cgw/g/5zkjmcq7y18occs00skkscgwg.jpg")"
+                                         class="img-fluid" alt="Product Image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="cart-item">
+                                <h3>★ IBANEZ GRG121DX-BKF</h3>
+                                <p class="card-text">Электрогитара, инструмент в корпусе черного матового цвета. Выполнен из тополя, гриф из клена и амаранта. Модель имеет 24 лада, два звукоснимателя.</p>
+                                <p style="font-family: Arial Black; font-size: 20px">Цена: 26 800 ₽</p>
+                                <div class="input-group mb-3">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="decreaseQuantity(this)">
+                                        -
+                                    </button>
+                                    <input type="number" class="form-control" id="quantityInput" placeholder="1" aria-label="Количество"
+                                           aria-describedby="button-addon1" value="1">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="increaseQuantity(this)">
+                                        +
+                                    </button>
+                                </div>
+                                <button class="btn btn-success">В корзине</button>
+                                <a href="#" class="btn btn-primary">Подробнее</a>
+                                <button class="btn btn-danger">Удалить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="cart-item">
+                                <div class="image-container">
+                                    <img src="@Url.Content("https://main-cdn.sbermegamarket.ru/big2/hlr-system/-18/391/859/929/34/100038621550b0.jpg")"
+                                         class="img-fluid" alt="Product Image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="cart-item">
+                                <h3>★ MARTINEZ FAW-702 BL</h3>
+                                <p class="card-text">Акустическая гитара, одна из самых универсальных и надежных моделей от Martinez, верхняя дека - ель , нижняя дека и обечайка - акатис, накладка - палисандр, порожек - палисандр.</p>
+                                <p style="font-family: Arial Black; font-size: 20px">Цена: 11 300 ₽</p>
+                                <div class="input-group mb-3">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="decreaseQuantity(this)">
+                                        -
+                                    </button>
+                                    <input type="number" class="form-control" id="quantityInput" placeholder="1" aria-label="Количество"
+                                           aria-describedby="button-addon1" value="1">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="increaseQuantity(this)">
+                                        +
+                                    </button>
+                                </div>
+                                <button class="btn btn-primary">В корзину</button>
+                                <a href="#" class="btn btn-primary">Подробнее</a>
+                                <button class="btn btn-danger">Удалить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function increaseQuantity(button) {
+        let input = button.previousElementSibling;
+        let currentQuantity = parseInt(input.value);
+        input.value = currentQuantity + 1;
+    }
+
+    function decreaseQuantity(button) {
+        let input = button.nextElementSibling;
+        let currentQuantity = parseInt(input.value);
+        if (currentQuantity > 1) {
+            input.value = currentQuantity - 1;
+        }
+    }
+</script>
+

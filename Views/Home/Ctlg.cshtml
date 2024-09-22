@@ -1,0 +1,160 @@
+﻿@{
+    ViewData["Title"] = "Catalog";
+}
+
+<div class="container">
+    <h3 class="text-center mb-4" style="font-family: Arial Black; font-size: 30px;">Каталог</h3>
+
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Найти гитару...              ⫧">
+                <div class="input-group-append">
+                    <button class="btn btn-success" type="button">Отыскать</button>
+                </div>
+            </div>
+     
+
+        </div>
+        <div class="col-md-2">
+            <select class="form-select" aria-label="Струны">
+                <option selected>Все струны</option>
+                <option value="8">8 струн</option>
+                <option value="7">7 струн</option>
+                <option value="6">6 струн</option>
+                <option value="4">4 струны</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <select class="form-select" aria-label="Форма">
+                <option selected>Все формы</option>
+                <option value="Les Paul">Les Paul</option>
+                <option value="Stratocaster">Stratocaster</option>
+                <option value="Telecaster">Telecaster</option>
+                <option value="Dreadnought">Dreadnought</option>
+                <option value="Superstrat">Superstrat</option>
+                <option value="Grand Auditorium">Grand Auditorium</option>
+                <option value="Jumbo">Jumbo</option>
+                <option value="Concert">Concert</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <select class="form-select" aria-label="Вид">
+                <option selected>Все виды</option>
+                <option value="Электрогитара">Электрогитара</option>
+                <option value="Бас-гитара">Бас-гитара</option>
+                <option value="Акустическая гитара">Акустическая гитара</option>
+                <option value="Укулеле">Укулеле</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <select class="form-select" aria-label="Конфигурация звукоснимателей">
+                <option selected>Все конфигурации звукоснимателей</option>
+                <option value="H-H">H-H</option>
+                <option value="S-S-S">S-S-S</option>
+                <option value="S-S">S-S</option>
+                <option value="H-S-H">H-S-H</option>
+                <option value="S-S-H">S-S-H</option>
+                <option value="H">H</option>
+                <option value="H-h">H-h</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <div class="image-container">
+                    <img src="@Url.Content("~/lib/image/electro.png")" class="card-img-top" alt="Electric Guitar">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Электрогитары</h5>
+                    <p class="card-text">Электрогитара — струнный щипковый электрический музыкальный инструмент, разновидность гитары, имеющая электромагнитные звукосниматели, преобразующие колебания металлических струн в колебания электрического тока.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <div class="image-container">
+                    <img src="@Url.Content("~/lib/image/bass.png")" class="card-img-top" alt="Bass Guitar">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Бас-гитары</h5>
+                    <p class="card-text">Бас-гитара — струнно-щипковый электрический музыкальный инструмент, предназначенный для игры в басовом диапазоне. На нём играют преимущественно пальцами, но допустима и игра медиатором. В сочетании с ударной установкой создаёт ритм-секцию.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <div class="image-container">
+                    <img src="@Url.Content("~/lib/image/acoustic.png")" class="card-img-top" alt="Acoustic Guitar">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Акустические гитары</h5>
+                    <p class="card-text">Акустиическая гитаара — струнный щипковый музыкальный инструмент (в большинстве разновидностей с шестью струнами) из семейства гитар, звучание которого осуществляется благодаря колебанию струн, усиливаемому за счёт резонирования полого корпуса.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <div class="image-container">
+                    <img src="@Url.Content("~/lib/image/class.png")" class="card-img-top" alt="Classical Guitar">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Классические гитары</h5>
+                    <p class="card-text">Классическая (испанская, шестиструнная) гитара — струнный щипковый музыкальный инструмент, струны ее преимущественно нейлоновые, более подходящие длля начинающих гитаристов.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <div class="image-container">
+                    <img src="@Url.Content("~/lib/image/ukulele.png")" class="card-img-top" alt="Ukulele">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Ukulele</h5>
+                    <p class="card-text">Укулеле – это миниатюрная четырёхструнная гавайская 'гитара'. Укулеле распространено на различных тихоокеанских островах, но ассоциируется, прежде всего, с гавайской музыкой, проста в изучении и имеет легкое мелодичное звучание</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <div class="image-container">
+                    <img src="@Url.Content("~/lib/image/electroacous.png")" class="card-img-top" alt="Electro-Acoustic Guitar">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Электроакустическая гитара</h5>
+                    <p class="card-text">Электроакустическая гитара — это акустическая гитара, оснащённая электромагнитным звукоснимателем, пьезоэлектрическим звукоснимателем или микрофоном.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <div class="image-container">
+                    <img src="@Url.Content("~/lib/image/guitalele.png")" class="card-img-top" alt="Electro-Acoustic Guitar">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Гиталеле</h5>
+                    <p class="card-text">
+                        Гиталеле — это мини-акустическая гитара, имеющая форму корпуса и размер укулеле-баритон.
+                        Шесть струн такого инструмента выполнены на манер классической гитары: три первые струны сделаны из нейлона, а басовые струны имеют металлическую оплётку. Гриф инструмента заметно шире стандартного и имеет 18 ладов.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <div class="image-container">
+                    <img src="@Url.Content("~/lib/image/other.png")" class="card-img-top" alt="Electro-Acoustic Guitar">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Прочее</h5>
+                    <p class="card-text">Ещё категории находятся здесь. В продаже также комбоусилители, каподастеры, медиаторы, чехлы, ремни, провода, струны и многое другое, всё на ваш выбор =)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\practa1hz.props" />
+</Project>

@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GUIZNOTES</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/practa1hz.styles.css" asp-append-version="true" />
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        main {
+            flex-grow: 1;
+            padding-bottom: 10px;
+        }
+
+        footer {
+            background-color: #C8D5E5;
+            width: 100%;
+            height: 150px; 
+            position: relative; 
+        }
+    </style>
+</head>
+<body style="background-color: #FFF0F5;">
+    <header class="container-fluid" style="background-color: #483D8B;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="" style="color: white;">
+                    <img src="@Url.Content("~/lib/image/guiznotes-logo.png")" alt="Logo" width="40" height="40" class="bordered-logo" /> GUIZNOTES
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-center">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Ctlg">Каталог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Fav">Избранное</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Ord">Заказы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Crt">Корзина</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container pb-3">
+        @RenderBody()
+    </main>
+
+    <footer class="footer mt-auto py-3 margin-top: -20px;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="footer-left">
+                <img src="@Url.Content("~/lib/image/logo2.png")" alt="Logo" width="40" height="40" class="rounded-circle" style="margin-bottom: 10px;" />
+                <p class="footer-phone">+7 (852) 552-52-52</p>
+                <p class="footer-phone">+7 (777) 55-78-01</p>
+            </div>
+            <div class="footer-right">
+                <p class="footer-copyright">MPT PRODUCTION OOO GUIZNOTES</p>
+                <p class="footer-copyright"> <b>© GUIZNOTES 2024</b></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
